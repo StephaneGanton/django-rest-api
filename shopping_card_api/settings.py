@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-be!o4w*_u^0_^5!9#h8kyxavfxk5*9@75^dxl-f%_zvtvo6833"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False #True
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
 #'pk_test_51MpFU9LaMS3dXGmEOEfy2TQxwkkDAEVA3traAQVlfmOCR5vJcvZ6q1VtlDjQHqwk3vepCiqQnA7xiKjYMpGDW2hH00L57YxHHg'
@@ -59,7 +59,7 @@ CORS_ALLOWED_ORIGINS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    #"whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
 
     "corsheaders.middleware.CorsMiddleware",
@@ -147,4 +147,4 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
